@@ -1,0 +1,21 @@
+{
+  "name": "oficina-node",
+  "version": "1.0.0",
+  "description": "API de To-Do list criada durante oficina",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon --watch src/server.js",
+    "start": "node src/server.js"
+  },
+  "author": "Joao Marcos",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
