@@ -74,8 +74,8 @@ completed BOOLEAN DEFAULT false
 Caso você queira clonar este repositório para o seu computador, abra o terminal e digite:
 
 ```bash
-git clone ...
-cd ...
+git clone https://github.com/joaomarcosmb/oficina-backend.git
+cd oficina-backend
 ```
 
 ### Instalar as dependências
