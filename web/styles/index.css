@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #1a1b36;
+  font-family: Arial, sans-serif;
+}
+
+.todo-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.todo-header h1 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  padding-right: 80px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.add-btn {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ff4757;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-btn:hover {
+  background-color: #ff6b81;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.todo-item input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.todo-item input[type="checkbox"]:checked {
+  background-color: #ff4757;
+  border-color: #ff4757;
+}
+
+.todo-item input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  color: white;
+  font-size: 12px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.todo-item.completed span {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.edit-btn, .delete-btn {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+}
+
+.material-symbols-outlined {
+  font-size: 24px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.edit-input[type="text"] {
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid #999;
+  width: 90%;
+  padding: 8px;
+}

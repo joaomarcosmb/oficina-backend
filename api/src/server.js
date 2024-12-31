@@ -1,4 +1,4 @@
-import pool from "./db";
+import pool from "./db/index.js";
 
 import express from "express";
 import cors from "cors";
@@ -49,6 +49,21 @@ app.put("/tasks/:id", async (req, res) => {
     const updatedTask = await pool.query(
       "UPDATE tasks SET title = $1, completed = $2 WHERE id = $3 RETURNING *",
       [title, completed, id]
+    );
+    res.json(updatedTask.rows[0]);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Erro ao atualizar tarefa." });
+  }
+});
+
+app.put("/tasks/:id/toggle", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const task = await pool.query("SELECT * FROM tasks WHERE id = $1", [id]);
+    const updatedTask = await pool.query(
+      "UPDATE tasks SET completed = $1 WHERE id = $2 RETURNING *",
+      [!task.rows[0].completed, id]
     );
     res.json(updatedTask.rows[0]);
   } catch (error) {

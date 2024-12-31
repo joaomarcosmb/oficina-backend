@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <div class="todo-container">
+      <div class="todo-header">
+        <h1>To-Do List</h1>
+      </div>
+      <div class="input-container">
+        <input type="text" id="taskInput" placeholder="Crie sua tarefa" />
+        <button class="add-btn" onclick="addTask()">Criar</button>
+      </div>
+      <ul class="todo-list" id="todoList"></ul>
+    </div>
+
+    <script src="scripts/add-task.js"></script>
+    <script src="scripts/load-tasks.js"></script>
+    <script src="scripts/toggle-task.js"></script>
+    <script src="scripts/edit-task.js"></script>
+    <script src="scripts/delete-task.js"></script>
+  </body>
+</html>
