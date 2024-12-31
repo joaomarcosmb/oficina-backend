@@ -1,5 +1,5 @@
 # Lista de Tarefas (Todo List)
-Aplicação web completa para gerenciamento de tarefas, construída com Node.js, Express, PostgreSQL e JavaScript vanilla.
+Aplicação web completa para gerenciamento de tarefas, construída com Node.js, Express, PostgreSQL e JavaScript vanilla. Este projeto foi criado para ser usado em uma oficina sobre backend.
 
 ## ⚙️ Pré-requisitos
 - Node.js e npm
