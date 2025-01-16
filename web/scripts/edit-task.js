@@ -1,3 +1,10 @@
+function attachEventListeners(taskElement) {
+  const editBtn = taskElement.querySelector(".edit-btn");
+  if (editBtn) {
+    editBtn.addEventListener("click", () => editTask(editBtn));
+  }
+}
+
 async function editTask(button) {
   const li = button.closest(".todo-item");
   const taskId = li.dataset.id;

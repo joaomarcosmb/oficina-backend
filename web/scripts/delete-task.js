@@ -1,6 +1,6 @@
 async function deleteTask(button) {
-  const listItem = button.parentElement;
-  const taskId = listItem.dataset.id;
+  const listItem = button.parentElement.parentElement;
+  const taskId = listItem.getAttribute("data-id");
 
   try {
     const response = await fetch(`http://localhost:8000/tasks/${taskId}`, {

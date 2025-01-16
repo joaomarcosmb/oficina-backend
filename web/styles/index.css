@@ -109,7 +109,7 @@ input[type="text"] {
   transform: translate(-50%, -50%);
 }
 
-.todo-item.completed span {
+.todo-item.completed .task-title {
   text-decoration: line-through;
   color: #999;
 }
